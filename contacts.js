@@ -17,7 +17,7 @@ function getContactsById(contactId) {
 function removeContact(contactId) {
   const contacts = listContacts();
   const updateContacts = contacts.filter((contact) => contact.id !== contactId);
-  fs.writeFileSync(contactsPath, JSON.stringify(updatedContacts, null, 2));
+  fs.writeFileSync(contactsPath, JSON.stringify(updateContacts, null, 2));
 }
 
 function addContact(name, email, phone) {
